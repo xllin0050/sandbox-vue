@@ -13,6 +13,7 @@ module.exports = {
     plugins: ['vue', 'prettier'],
     rules: {
         'vue/script-setup-uses-vars': 2,
+        'vue/multi-word-component-names': 0,
         'vue/valid-template-root': 0,
         'vue/no-unused-vars': 0,
         'no-unused-vars': 0,

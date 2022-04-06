@@ -1,7 +1,5 @@
 <script setup></script>
 
 <template>
-    <router-view />
+    <h1>about</h1>
 </template>
-
-<style></style>

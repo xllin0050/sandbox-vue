@@ -5,6 +5,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 import legacy from '@vitejs/plugin-legacy'
 import Components from 'unplugin-vue-components/vite'
 import WindiCSS from 'vite-plugin-windicss'
+import Pages from 'vite-plugin-pages'
 
 export default defineConfig({
     plugins: [
@@ -15,6 +16,9 @@ export default defineConfig({
         }),
         Components(),
         WindiCSS(),
+        Pages({
+          exclude: ['**/components/*.vue']
+        }),
     ],
     resolve: {
         alias: {
