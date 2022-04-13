@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-    <router-view />
+    <div class="w-full min-h-screen">
+        <router-view />
+    </div>
 </template>
 
 <style></style>
