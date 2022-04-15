@@ -31,9 +31,6 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <p class="text-center py-4">
-    {{ backgroundName }}
-  </p>
   <div class="flex justify-center items-center">
     <div class="relative bg-gray-400 w-300px h-300px rounded-full">
       <p ref="nameText" class="nameText absolute w-full h-full uppercase">shih(drum)</p>
