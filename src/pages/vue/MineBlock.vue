@@ -1,4 +1,5 @@
 <script setup>
+import MineBlock from '@/notes/MineBlock.md'
 import { reactive } from 'vue'
 const WIDTH = 10
 const HEIGHT = 10
@@ -16,12 +17,6 @@ const data = reactive(
         >{{ num }}</span
       >
     </div>
-    <code>
-      const WIDTH = 10
-      const HEIGHT = 10
-      const data = reactive(
-        Array.from({ length: HEIGHT }, (_, y) => Array.from({ length: WIDTH }, (_, x) => y * 10 + x + 1))
-      )
-    </code>
+    <MineBlock class="pt-4" />
   </div>
 </template>

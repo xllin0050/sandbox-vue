@@ -23,9 +23,12 @@
     "unplugin-vue-components": "^0.18.5",
     "vite": "^2.9.5",
     "vite-plugin-eslint": "^1.5.2",
+    "vite-plugin-md": "^0.13.0",
     "vite-plugin-pages": "^0.22.0",
     "vite-plugin-windicss": "^1.8.4",
     "vue-eslint-parser": "^8.3.0",
+    "markdown-it-prism": "^2.2.4",
+    "prismjs": "^1.28.0",
     "windicss": "^3.5.0"
   },
   "browserslist": [
