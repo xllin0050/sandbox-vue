@@ -3,7 +3,7 @@ const declareYear = new Date().getFullYear()
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-slate-600 text-slate-200">
+  <div class="w-screen h-screen bg-slate-600 text-slate-200">
     <nav>
       <ul class="flex bg-slate-800">
         <li class="p-4"><router-link class="p-8" to="/">index</router-link></li>
