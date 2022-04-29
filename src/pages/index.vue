@@ -24,7 +24,7 @@ const vanillaRouteList = getRouteList('vanilla-')
         </router-link>
       </li>
     </ul>
-    <ul class="bg-slate-700">
+    <ul class="bg-slate-700/70">
       <li v-for="link in vanillaRouteList" :key="link.path" class="py-2">
         <router-link class="p-6" :to="link.path">
           {{ link.title }}
