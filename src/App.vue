@@ -14,7 +14,7 @@ const declareYear = new Date().getFullYear()
       <router-view />
     </main>
     <footer class="fixed py-4 lg:py-8 bottom-0">
-      <div class="text-center text-sm lg:text-base">
+      <div class="text-center text-sm">
         Copyright &copy; {{ declareYear }} Carl. All rights reserved.
       </div>
     </footer>
