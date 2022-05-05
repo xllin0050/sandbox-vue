@@ -15,7 +15,7 @@ console.log(ary) //[['a',1],['b',2]]
 
 將陣列轉物件 array of arrays
 
-```javascript=
+```javascript
 const ary = [['a', 1],['b', 2]]
 const obj = Object.fromEntries(ary)
 ```
