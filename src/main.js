@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from '~pages'
+import { createPinia } from 'pinia'
 import 'virtual:windi-base.css'
 import 'virtual:windi-components.css'
 import './assets/locomotive-scroll.css'
@@ -19,4 +20,4 @@ const router = createRouter({
   routes,
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(createPinia()).mount('#app')

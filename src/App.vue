@@ -1,5 +1,8 @@
 <script setup>
+import { useStore } from '@/stores/noteRoutes'
 const declareYear = new Date().getFullYear()
+const store = useStore()
+console.log(store)
 </script>
 
 <template>
