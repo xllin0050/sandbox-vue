@@ -1,8 +1,25 @@
 <script setup>
-import { useStore } from '@/stores/noteRoutes'
-const declareYear = new Date().getFullYear()
-const store = useStore()
-console.log(store)
+import { useRouter } from 'vue-router'
+import { useRoutesStore } from '@/stores/noteRoutes'
+const router = useRouter()
+const store = useRoutesStore()
+
+function getRouteList(prefixName) {
+  return router.options.routes
+    .map((route) => {
+      if (route.name.startsWith(prefixName)) route.title = route.name.substring(prefixName.length)
+      return route
+    })
+    .filter((route) => route.name.startsWith(prefixName))
+}
+
+store.$patch((state) => {
+  // 直接賦值
+  state.vanillaNoteRoutes = getRouteList('vanilla-')
+  // Actions賦值
+  store.setVueNoteRoutes(getRouteList('vue-'))
+})
+
 </script>
 
 <template>
@@ -18,7 +35,7 @@ console.log(store)
     </main>
     <footer class="fixed py-4 lg:py-8 bottom-0">
       <div class="text-center text-sm">
-        Copyright &copy; {{ declareYear }} Carl. All rights reserved.
+        Copyright &copy; {{ new Date().getFullYear() }} Carl. All rights reserved.
       </div>
     </footer>
   </div>

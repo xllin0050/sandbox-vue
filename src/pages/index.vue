@@ -1,18 +1,16 @@
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
+import { computed } from 'vue'
+import { useRoutesStore } from '@/stores/noteRoutes'
 
-function getRouteList(prefixName) {
-  return router.options.routes
-    .map((route) => {
-      if (route.name.startsWith(prefixName)) route.title = route.name.substring(prefixName.length)
-      return route
-    })
-    .filter((route) => route.name.startsWith(prefixName))
-}
+const store = useRoutesStore()
 
-const vueRouteList = getRouteList('vue-')
-const vanillaRouteList = getRouteList('vanilla-')
+// 直接取值
+// const { vueNoteRoutes, vanillaNoteRoutes } = store
+
+// computed取值
+const vueRouteList = computed(() => store.vueNoteRoutes)
+const vanillaRouteList = computed(() => store.vanillaNoteRoutes)
+
 </script>
 
 <template>
