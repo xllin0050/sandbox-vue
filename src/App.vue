@@ -30,7 +30,7 @@ store.$patch((state) => {
         <li class="py-4"><router-link class="p-8" to="/about">about</router-link></li>
       </ul>
     </nav>
-    <main class="py-4">
+    <main class="">
       <router-view />
     </main>
     <footer class="fixed py-4 lg:py-8 bottom-0">
