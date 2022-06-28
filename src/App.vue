@@ -1,6 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useRoutesStore } from '@/stores/noteRoutes'
+
 const router = useRouter()
 const store = useRoutesStore()
 
@@ -19,7 +20,6 @@ store.$patch((state) => {
   // Actions賦值
   store.setVueNoteRoutes(getRouteList('vue-'))
 })
-
 </script>
 
 <template>

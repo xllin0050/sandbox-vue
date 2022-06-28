@@ -5,7 +5,6 @@ import routes from '~pages'
 import { createPinia } from 'pinia'
 import 'virtual:windi-base.css'
 import 'virtual:windi-components.css'
-import './assets/locomotive-scroll.css'
 import 'virtual:windi-utilities.css'
 
 import 'prismjs'

@@ -1,6 +1,7 @@
 ---
 title: About Array
 ---
+
 # About Array
 
 ### Object.entries
@@ -16,7 +17,10 @@ console.log(ary) //[['a',1],['b',2]]
 將陣列轉物件 array of arrays
 
 ```javascript
-const ary = [['a', 1],['b', 2]]
+const ary = [
+  ['a', 1],
+  ['b', 2],
+]
 const obj = Object.fromEntries(ary)
 ```
 
@@ -63,7 +67,7 @@ const ary = [1, 2, 3]
 const newAry = ary.forEach((x) => {
   return x + 1
 })
-console.log(newAry) //永遠回傳undefined
+console.log(newAry) //return undefined
 ```
 
 ## reduce
@@ -160,4 +164,41 @@ const a = [N01, N02, N03]
 a.sort(function (a, b) {
   return a.slice(-2) - b.slice(-2)
 })
+```
+
+分割陣列
+
+```javascript
+const dataChunk = (array, size) => {
+  // This prevents infinite loops
+  if (size < 1) throw new Error('Size must be positive')
+
+  const result = []
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size))
+  }
+  return result
+}
+
+const chunk = (array, size) =>
+  array.reduce((acc, _, i) => {
+    if (i % size === 0) acc.push(array.slice(i, i + size))
+    return acc
+  }, [])
+```
+
+從陣列中刪除重複的內容
+
+```javascript
+var arr = [1, 2, 3, 4, 1, 2, 3, 1, 2, 3]
+
+var uniqueArr = [...new Set(arr)]
+
+console.log(uniqueArr) //[1, 2, 3, 4]
+
+var arrTwo = ['Hello 1 ', ' Hello 2 ', 'Hello 1 ', ' Hello 2 ', 'Hello 1 again']
+
+const filteredArray = arrTwo.filter((ele, ind) => arrTwo.indexOf(ele) == ind)
+
+console.log('The filtered array', filteredArray) //The filtered array  (3) ["Hello 1 ", " Hello 2 ", "Hello 1 again"]
 ```
